@@ -16,7 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 4vw;
+    padding: 0 8vw;
 }
 
 .head-logo {
@@ -52,6 +52,7 @@ header {
 }
 
 .box-container {
+    width: 100vw;
     padding: 8vh 8vw 16vh 8vw;
 }
 
@@ -63,7 +64,10 @@ header {
 }
 
 .first {
-    padding-bottom: 0vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 0;
 }
 
 .box-image {
@@ -103,8 +107,38 @@ header {
     line-height: 25px;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1060px) {
     .section-elem {
         display: none;
     }
 }
+
+@media screen and (min-width: 500px) and (max-width: 1060px) {
+    .box-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: calc((100vw - 14vh - 16vw)/3);
+    }
+
+    .first {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: end;
+        padding: 0 7vw 0 7vh;
+        width: calc((((100vw - 14vh - 16vw)/3)*2) + 7vh);
+    }
+
+    .first .box-image {
+        
+    }
+
+   
+       
+    
+}
+
