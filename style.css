@@ -131,7 +131,7 @@ header {
     }
 
     .first {
-        width: calc((100vw - 5vh - 12vw) - ((100vw - 10vh - 12vw)/3));
+        width: calc((((100vw - 12vw - 10vh)/3)*2) + 5vh);
         padding-bottom: 0;
     }
     .bars {
@@ -144,8 +144,8 @@ header {
 
 
 
-@media screen and (min-width: 1000px) {
-    .header {
+@media screen and (min-width: 1001px) {
+    header {
         height: 14vh;
     }
     .bars {
@@ -154,7 +154,29 @@ header {
     .head-cont {
         padding: 0 18vw;
     }
+    .head-logo {
+        width: 8vw;
+    }
     .box-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         padding: 8vh 18vw 14vh 18vw;
     }
+    
+    .box-scritte {
+        max-width: 50%;
+    }
+    .box {
+        width: calc((100vw - 10vh - 36vw)/3);
+        padding: 5vh 3vw 5vh 3vw;
+    }
+
+    .first {
+        display: flex;
+        flex-direction: row;
+        width: calc((((100vw - 10vh - 36vw)/3)*2) + 5vh);
+        padding-bottom: 0;
+    }
+
 }
